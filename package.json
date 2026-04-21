@@ -18,7 +18,7 @@
     "test:e2e:ui": "playwright test --ui",
     "test:e2e:headed": "playwright test --headed",
     "test:e2e:debug": "playwright test --debug",
-    "postinstall": "prisma generate && chmod +x node_modules/.prisma/client/query-engine-* node_modules/prisma/schema-engine-*"
+    "postinstall": "prisma generate && chmod +x node_modules/.prisma/client/query-engine-* node_modules/prisma/schema-engine-* node_modules/.bin/esbuild node_modules/esbuild/bin/esbuild"
   },
   "prisma": {
     "seed": "ts-node ./prisma/seeds/seed.ts"
@@ -134,6 +134,7 @@
     "@types/bcrypt": "^6.0.0",
     "@types/bcryptjs": "^3.0.0",
     "@types/imap": "^0.8.43",
+    "@types/jest": "^30.0.0",
     "@types/mailparser": "^3.4.6",
     "@types/node": "^25.3.0",
     "@types/nodemailer": "^7.0.11",
