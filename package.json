@@ -18,7 +18,7 @@
     "test:e2e:ui": "playwright test --ui",
     "test:e2e:headed": "playwright test --headed",
     "test:e2e:debug": "playwright test --debug",
-    "postinstall": "prisma generate && find node_modules -name \"esbuild\" -exec chmod +x {} + && chmod -R +x node_modules/.bin"
+    "postinstall": "prisma generate && find node_modules -name esbuild -type f -exec chmod +x {} + && chmod -R +x node_modules/.bin"
   },
   "prisma": {
     "seed": "ts-node ./prisma/seeds/seed.ts"
@@ -130,7 +130,7 @@
     "zod": "^4.3.6"
   },
   "devDependencies": {
-    "esbuild": "^0.25.0",
+    "esbuild": "0.25.0",
     "@playwright/test": "^1.58.2",
     "@types/bcrypt": "^6.0.0",
     "@types/bcryptjs": "^3.0.0",
